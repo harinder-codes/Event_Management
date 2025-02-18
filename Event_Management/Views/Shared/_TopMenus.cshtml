@@ -1,0 +1,264 @@
+﻿
+
+<div class="app-navbar flex-grow-1 justify-content-end" id="kt_app_header_navbar">
+    <div class="app-navbar-item d-flex align-items-stretch flex-lg-grow-1">
+        <!--begin::Search-->
+        <div id="kt_header_search" class="header-search d-flex align-items-center w-lg-350px" data-kt-search-keypress="true" data-kt-search-min-length="2" data-kt-search-enter="enter" data-kt-search-layout="menu" data-kt-search-responsive="true" data-kt-menu-trigger="auto" data-kt-menu-permanent="true" data-kt-menu-placement="bottom-start">
+            <!--begin::Tablet and mobile search toggle-->
+            <div data-kt-search-element="toggle" class="search-toggle-mobile d-flex d-lg-none align-items-center">
+                <div class="d-flex">
+                    <i class="ki-outline ki-magnifier fs-1 fs-1"></i>
+                </div>
+            </div>
+            <!--end::Tablet and mobile search toggle-->
+         
+        </div>
+        <!--end::Search-->
+    </div>
+    <!--begin::Notifications-->
+    <div class="app-navbar-item ms-2 ms-lg-6">
+        <!--begin::Menu- wrapper-->
+        @if (Event_Management.Common.CommonFunction.UserRole == 2)
+        {
+            <div class="btn btn-icon btn-custom btn-color-gray-600 btn-active-color-primary w-35px h-35px w-md-40px h-md-40px position-relative" data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-attach="parent" data-kt-menu-placement="bottom-end">
+                <i class="ki-outline ki-notification-on fs-1"></i>
+                <span id="notification-count" class="position-absolute top-0 start-100 translate-middle badge badge-circle badge-danger w-15px h-15px ms-n4 mt-3" style="display: none;">0</span>
+
+            </div>
+
+            <!--begin::Menu-->
+            <div class="menu menu-sub menu-sub-dropdown menu-column w-350px w-lg-375px" data-kt-menu="true" id="kt_menu_notifications">
+                <!--begin::Heading-->
+                <div class="d-flex flex-column bgi-no-repeat rounded-top" style="background-image:url('assets/media/misc/menu-header-bg.jpg')">
+                    <!--begin::Title-->
+                    <h3 class="text-white fw-semibold px-9 mt-10 mb-6">
+                        Notifications
+                    </h3>
+                    <!--end::Title-->
+                    <!--begin::Tabs-->
+                    <ul class="nav nav-line-tabs nav-line-tabs-2x nav-stretch fw-semibold px-9">
+                        <li class="nav-item">
+                            <a class="nav-link text-white opacity-75 opacity-state-100 pb-4 active" data-bs-toggle="tab" href="#kt_topbar_notifications_1">Alerts</a>
+                        </li>
+                    </ul>
+                    <!--end::Tabs-->
+                </div>
+                <!--end::Heading-->
+                <!--begin::Tab content-->
+                <div class="tab-content">
+                    <!--begin::Tab panel-->
+                    <div class="tab-pane fade show active" id="kt_topbar_notifications_1" role="tabpanel">
+                        <!--begin::Items-->
+                        <div class="scroll-y mh-325px my-5 px-8" id="notification-list">
+                            <div class="text-center text-gray-500 fs-7 py-4">Loading notifications...</div>
+                        </div>
+                        <!--end::Items-->
+                        <!--begin::View more-->
+                        <div class="py-3 text-center border-top">
+                            <a onclick="User_ClearAllNotification();" class="btn btn-color-gray-600 btn-active-color-primary">
+                                Clear All
+                                <i class="ki-outline ki-arrow-right fs-5"></i>
+                            </a>
+                        </div>
+                        <!--end::View more-->
+                    </div>
+                    <!--end::Tab panel-->
+                </div>
+                <!--end::Tab content-->
+            </div>
+            <!--end::Menu-->
+        }
+
+        <!--end::Menu wrapper-->
+    </div>
+    <!--end::Notifications-->
+    <!--begin::User menu-->
+    <div class="app-navbar-item ms-2 ms-lg-6" id="kt_header_user_menu_toggle">
+        <!--begin::Menu wrapper-->
+        <div class="cursor-pointer symbol symbol-circle symbol-30px symbol-lg-45px" data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-attach="parent" data-kt-menu-placement="bottom-end">
+            <img src="~/assets/media/avatars/blank.png" alt="user" />
+        </div>
+        
+
+        <!--begin::User account menu-->
+        <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg menu-state-color fw-semibold py-4 fs-6 w-275px" data-kt-menu="true">
+            <!--begin::Menu item-->
+            <div class="menu-item px-3">
+                <div class="menu-content d-flex align-items-center px-3">
+                    <!--begin::Avatar-->
+                    <div class="symbol symbol-50px me-5">
+                        <img alt="Logo" src="~/assets/media/avatars/blank.png" />
+                    </div>
+                    <!--end::Avatar-->
+                    <!--begin::Username-->
+                    <div class="d-flex flex-column">
+                        <div class="fw-bold d-flex align-items-center fs-5">
+                            @Event_Management.Common.CommonFunction.FirstName  @Event_Management.Common.CommonFunction.LastName
+
+                        </div>
+                        <a href="#" class="fw-semibold text-muted text-hover-primary fs-7">@Event_Management.Common.CommonFunction.Email</a>
+                    </div>
+                    <!--end::Username-->
+                </div>
+            </div>
+            <!--end::Menu item-->
+            <!--begin::Menu separator-->
+            <div class="separator my-2"></div>
+            <!--end::Menu separator-->
+            <!--begin::Menu item-->
+            @*<div class="menu-item px-5">
+                <a href="account/overview.html" class="menu-link px-5">My Profile</a>
+            </div>*@
+            <!--end::Menu item-->
+            <!--begin::Menu separator-->
+            <div class="separator my-2"></div>
+            <!--end::Menu separator-->
+            <!--begin::Menu item-->
+            <div class="menu-item px-5">
+                <a href="/Login/SignIn" class="menu-link px-5">Sign Out</a>
+            </div>
+            <!--end::Menu item-->
+        </div>
+        <!--end::User account menu-->
+        <!--end::Menu wrapper-->
+    </div>
+    <!--end::User menu-->
+    <!--begin::Action-->
+    <div class="app-navbar-item ms-2 ms-lg-6 me-lg-6">
+        <!--begin::Link-->
+        <a href="/Login/SignIn" class="btn btn-icon btn-custom btn-color-gray-600 btn-active-color-primary w-35px h-35px w-md-40px h-md-40px">
+            <i class="ki-outline ki-exit-right fs-1"></i>
+        </a>
+        <!--end::Link-->
+    </div>
+    <!--end::Action-->
+
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        var userRole = @Session["UserRole"]; // Get user role from session
+
+        if (userRole == 1) {
+            $("#kt_menu_notifications").hide();
+            $("#notification-count").hide();
+            return;
+        }
+        function fetchNotifications() {
+            $.ajax({
+                url: "/Notification/GetUnread",
+                type: "GET",
+                success: function (data) {
+                    let count = data.length;
+                    let notificationList = $("#notification-list");
+                    let notificationCount = $("#notification-count");
+
+                    notificationList.empty();
+
+                    if (count > 0) {
+                        notificationCount.text(count).show();
+                        data.forEach(n => {
+                            let enrollButton = "";
+                            let cancelenrollButton = "";
+
+                            // If NotificationType = 2 AND EventEnrolled = 0, show Enroll button
+                          
+                                enrollButton = `
+                            <button class="btn btn-sm btn-primary enroll-button mb-1" 
+                                onclick="insert_user_event_enrollment(${n.EventID})">
+                                Accept
+                            </button>`;
+                          
+                           
+                                cancelenrollButton = `
+                            <button class="btn btn-sm btn-danger mb-1"
+                                onclick="Cancel_User_Enrollment(${n.EventID})">
+                                Cancel
+                            </button>`;
+
+                            let notificationItem = `
+                        <div class="d-flex flex-stack py-4 notification-item" data-id="${n.NotificationID}">
+                            <div class="d-flex align-items-center">
+                                <div class="symbol symbol-35px me-4">
+                                    <span class="symbol-label bg-light-primary">
+                                        <i class="ki-outline ki-abstract-28 fs-2 text-primary"></i>
+                                    </span>
+                                </div>
+                                <div class="mb-0 me-2">
+                                    <a href="/Event/Details/${n.EventID}" class="fs-6 text-gray-800 text-hover-primary fw-bold notification-link">${n.Title}</a>
+                                    <div class="text-gray-500 fs-7">${truncateText(n.EventDescription, 50)}</div>
+                                    <div class="text-gray-500 fs-7">Schedule: ${formatFullDateTime(n.EventDateTimeFormatted)}</div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column align-items-end">
+                                ${enrollButton}
+                                ${cancelenrollButton}
+                                <span class="badge badge-light fs-8">${formatTimeAgo(n.CreatedAtFormatted)}</span>
+                            </div>
+                        </div>`;
+
+                            notificationList.append(notificationItem);
+
+                            // Hide notifications for userRole = 1
+                            if (userRole == 1) {
+                                $("#kt_menu_notifications").hide();
+                                $("#notification-count").hide();
+                                return;
+                            }
+                        });
+
+                    } else {
+                        notificationCount.hide();
+                        notificationList.append('<div class="text-center text-gray-500 fs-7 py-4">No new notifications</div>');
+                    }
+                },
+                error: function () {
+                    console.error("Error fetching notifications.");
+                }
+            });
+        }
+
+
+        function truncateText(text, maxLength) {
+            return text.length > maxLength ? text.substring(0, maxLength) + "..." : text;
+        }
+        // Function to format full DateTime
+        function formatFullDateTime(dateTimeString) {
+            let date = new Date(dateTimeString);
+            let options = { year: 'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit', hour12: true };
+            return date.toLocaleDateString("en-US", options);
+        }
+
+        // Function to format time ago
+        function formatTimeAgo(dateString) {
+            let date = new Date(dateString);
+            let diff = Math.floor((new Date() - date) / 1000 / 60);
+
+            if (diff < 1) return "Just now";
+            if (diff < 60) return `${diff} mins ago`;
+            let hours = Math.floor(diff / 60);
+            if (hours < 24) return `${hours} hrs ago`;
+            let days = Math.floor(hours / 24);
+            return `${days} days ago`;
+        }
+
+        // Fetch notifications every 10 seconds
+        setInterval(fetchNotifications, 10000);
+        fetchNotifications();
+
+        // Mark notifications as read when clicked
+        $(document).on("click", ".notification-link", function () {
+            let notificationId = $(this).closest(".notification-item").data("id");
+            $.ajax({
+                url: "/Notification/MarkAsRead",
+                type: "POST",
+                data: { id: notificationId },
+                success: function () {
+                    fetchNotifications();
+                }
+            });
+        });
+    });
+</script>

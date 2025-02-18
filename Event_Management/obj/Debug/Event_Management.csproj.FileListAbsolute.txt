@@ -1,0 +1,154 @@
+D:\Other Projects\Event_Management\Event_Management\bin\Event_Management.dll.config
+D:\Other Projects\Event_Management\Event_Management\bin\Event_Management.dll
+D:\Other Projects\Event_Management\Event_Management\bin\Event_Management.pdb
+D:\Other Projects\Event_Management\Event_Management\bin\roslyn\csc.exe
+D:\Other Projects\Event_Management\Event_Management\bin\roslyn\csc.exe.config
+D:\Other Projects\Event_Management\Event_Management\bin\roslyn\csc.rsp
+D:\Other Projects\Event_Management\Event_Management\bin\roslyn\csi.exe
+D:\Other Projects\Event_Management\Event_Management\bin\roslyn\csi.exe.config
+D:\Other Projects\Event_Management\Event_Management\bin\roslyn\csi.rsp
+D:\Other Projects\Event_Management\Event_Management\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Other Projects\Event_Management\Event_Management\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Other Projects\Event_Management\Event_Management\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Other Projects\Event_Management\Event_Management\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Other Projects\Event_Management\Event_Management\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Other Projects\Event_Management\Event_Management\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Other Projects\Event_Management\Event_Management\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Other Projects\Event_Management\Event_Management\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Other Projects\Event_Management\Event_Management\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Other Projects\Event_Management\Event_Management\bin\roslyn\Microsoft.Managed.Core.CurrentVersions.targets
+D:\Other Projects\Event_Management\Event_Management\bin\roslyn\Microsoft.Managed.Core.targets
+D:\Other Projects\Event_Management\Event_Management\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Other Projects\Event_Management\Event_Management\bin\roslyn\System.Buffers.dll
+D:\Other Projects\Event_Management\Event_Management\bin\roslyn\System.Collections.Immutable.dll
+D:\Other Projects\Event_Management\Event_Management\bin\roslyn\System.Memory.dll
+D:\Other Projects\Event_Management\Event_Management\bin\roslyn\System.Numerics.Vectors.dll
+D:\Other Projects\Event_Management\Event_Management\bin\roslyn\System.Reflection.Metadata.dll
+D:\Other Projects\Event_Management\Event_Management\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
+D:\Other Projects\Event_Management\Event_Management\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\Other Projects\Event_Management\Event_Management\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\Other Projects\Event_Management\Event_Management\bin\roslyn\vbc.exe
+D:\Other Projects\Event_Management\Event_Management\bin\roslyn\vbc.exe.config
+D:\Other Projects\Event_Management\Event_Management\bin\roslyn\vbc.rsp
+D:\Other Projects\Event_Management\Event_Management\bin\roslyn\VBCSCompiler.exe
+D:\Other Projects\Event_Management\Event_Management\bin\roslyn\VBCSCompiler.exe.config
+D:\Other Projects\Event_Management\Event_Management\bin\Antlr3.Runtime.dll
+D:\Other Projects\Event_Management\Event_Management\bin\Dapper.dll
+D:\Other Projects\Event_Management\Event_Management\bin\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Other Projects\Event_Management\Event_Management\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Other Projects\Event_Management\Event_Management\bin\Microsoft.Web.Infrastructure.dll
+D:\Other Projects\Event_Management\Event_Management\bin\Newtonsoft.Json.dll
+D:\Other Projects\Event_Management\Event_Management\bin\System.Runtime.CompilerServices.Unsafe.dll
+D:\Other Projects\Event_Management\Event_Management\bin\System.Threading.Tasks.Extensions.dll
+D:\Other Projects\Event_Management\Event_Management\bin\System.Web.Helpers.dll
+D:\Other Projects\Event_Management\Event_Management\bin\System.Web.Mvc.dll
+D:\Other Projects\Event_Management\Event_Management\bin\System.Web.Optimization.dll
+D:\Other Projects\Event_Management\Event_Management\bin\System.Web.Razor.dll
+D:\Other Projects\Event_Management\Event_Management\bin\System.Web.WebPages.Deployment.dll
+D:\Other Projects\Event_Management\Event_Management\bin\System.Web.WebPages.dll
+D:\Other Projects\Event_Management\Event_Management\bin\System.Web.WebPages.Razor.dll
+D:\Other Projects\Event_Management\Event_Management\bin\Unity.Abstractions.dll
+D:\Other Projects\Event_Management\Event_Management\bin\Unity.Container.dll
+D:\Other Projects\Event_Management\Event_Management\bin\Unity.Mvc.dll
+D:\Other Projects\Event_Management\Event_Management\bin\WebActivatorEx.dll
+D:\Other Projects\Event_Management\Event_Management\bin\WebGrease.dll
+D:\Other Projects\Event_Management\Event_Management\bin\Dapper.xml
+D:\Other Projects\Event_Management\Event_Management\bin\Microsoft.Bcl.AsyncInterfaces.xml
+D:\Other Projects\Event_Management\Event_Management\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Other Projects\Event_Management\Event_Management\bin\System.Runtime.CompilerServices.Unsafe.xml
+D:\Other Projects\Event_Management\Event_Management\bin\System.Threading.Tasks.Extensions.xml
+D:\Other Projects\Event_Management\Event_Management\bin\System.Web.Helpers.xml
+D:\Other Projects\Event_Management\Event_Management\bin\System.Web.Mvc.xml
+D:\Other Projects\Event_Management\Event_Management\bin\System.Web.Razor.xml
+D:\Other Projects\Event_Management\Event_Management\bin\System.Web.WebPages.xml
+D:\Other Projects\Event_Management\Event_Management\bin\System.Web.WebPages.Deployment.xml
+D:\Other Projects\Event_Management\Event_Management\bin\System.Web.WebPages.Razor.xml
+D:\Other Projects\Event_Management\Event_Management\bin\System.Web.Optimization.xml
+D:\Other Projects\Event_Management\Event_Management\bin\Newtonsoft.Json.xml
+D:\Other Projects\Event_Management\Event_Management\bin\Unity.Abstractions.pdb
+D:\Other Projects\Event_Management\Event_Management\bin\Unity.Container.pdb
+D:\Other Projects\Event_Management\Event_Management\bin\Unity.Mvc.pdb
+D:\Other Projects\Event_Management\Event_Management\bin\Unity.Mvc.xml
+D:\Other Projects\Event_Management\Event_Management\bin\Antlr3.Runtime.pdb
+D:\Other Projects\Event_Management\Event_Management\obj\Debug\Event_Management.csproj.AssemblyReference.cache
+D:\Other Projects\Event_Management\Event_Management\obj\Debug\Event_Management.csproj.CoreCompileInputs.cache
+D:\Other Projects\Event_Management\Event_Management\obj\Debug\Event_Ma.9E3870B0.Up2Date
+D:\Other Projects\Event_Management\Event_Management\obj\Debug\Event_Management.dll
+D:\Other Projects\Event_Management\Event_Management\obj\Debug\Event_Management.pdb
+C:\Users\navrattan.singh\OneDrive - UKG\Documents\Assignments\.Net\Event_Management\Event_Management\bin\Event_Management.dll.config
+C:\Users\navrattan.singh\OneDrive - UKG\Documents\Assignments\.Net\Event_Management\Event_Management\bin\Event_Management.dll
+C:\Users\navrattan.singh\OneDrive - UKG\Documents\Assignments\.Net\Event_Management\Event_Management\bin\Event_Management.pdb
+C:\Users\navrattan.singh\OneDrive - UKG\Documents\Assignments\.Net\Event_Management\Event_Management\bin\roslyn\csc.exe
+C:\Users\navrattan.singh\OneDrive - UKG\Documents\Assignments\.Net\Event_Management\Event_Management\bin\roslyn\csc.exe.config
+C:\Users\navrattan.singh\OneDrive - UKG\Documents\Assignments\.Net\Event_Management\Event_Management\bin\roslyn\csc.rsp
+C:\Users\navrattan.singh\OneDrive - UKG\Documents\Assignments\.Net\Event_Management\Event_Management\bin\roslyn\csi.exe
+C:\Users\navrattan.singh\OneDrive - UKG\Documents\Assignments\.Net\Event_Management\Event_Management\bin\roslyn\csi.exe.config
+C:\Users\navrattan.singh\OneDrive - UKG\Documents\Assignments\.Net\Event_Management\Event_Management\bin\roslyn\csi.rsp
+C:\Users\navrattan.singh\OneDrive - UKG\Documents\Assignments\.Net\Event_Management\Event_Management\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\navrattan.singh\OneDrive - UKG\Documents\Assignments\.Net\Event_Management\Event_Management\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\navrattan.singh\OneDrive - UKG\Documents\Assignments\.Net\Event_Management\Event_Management\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\navrattan.singh\OneDrive - UKG\Documents\Assignments\.Net\Event_Management\Event_Management\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\navrattan.singh\OneDrive - UKG\Documents\Assignments\.Net\Event_Management\Event_Management\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\navrattan.singh\OneDrive - UKG\Documents\Assignments\.Net\Event_Management\Event_Management\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\navrattan.singh\OneDrive - UKG\Documents\Assignments\.Net\Event_Management\Event_Management\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\navrattan.singh\OneDrive - UKG\Documents\Assignments\.Net\Event_Management\Event_Management\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\navrattan.singh\OneDrive - UKG\Documents\Assignments\.Net\Event_Management\Event_Management\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\navrattan.singh\OneDrive - UKG\Documents\Assignments\.Net\Event_Management\Event_Management\bin\roslyn\Microsoft.Managed.Core.CurrentVersions.targets
+C:\Users\navrattan.singh\OneDrive - UKG\Documents\Assignments\.Net\Event_Management\Event_Management\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\navrattan.singh\OneDrive - UKG\Documents\Assignments\.Net\Event_Management\Event_Management\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\navrattan.singh\OneDrive - UKG\Documents\Assignments\.Net\Event_Management\Event_Management\bin\roslyn\System.Buffers.dll
+C:\Users\navrattan.singh\OneDrive - UKG\Documents\Assignments\.Net\Event_Management\Event_Management\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\navrattan.singh\OneDrive - UKG\Documents\Assignments\.Net\Event_Management\Event_Management\bin\roslyn\System.Memory.dll
+C:\Users\navrattan.singh\OneDrive - UKG\Documents\Assignments\.Net\Event_Management\Event_Management\bin\roslyn\System.Numerics.Vectors.dll
+C:\Users\navrattan.singh\OneDrive - UKG\Documents\Assignments\.Net\Event_Management\Event_Management\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\navrattan.singh\OneDrive - UKG\Documents\Assignments\.Net\Event_Management\Event_Management\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\navrattan.singh\OneDrive - UKG\Documents\Assignments\.Net\Event_Management\Event_Management\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\navrattan.singh\OneDrive - UKG\Documents\Assignments\.Net\Event_Management\Event_Management\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\navrattan.singh\OneDrive - UKG\Documents\Assignments\.Net\Event_Management\Event_Management\bin\roslyn\vbc.exe
+C:\Users\navrattan.singh\OneDrive - UKG\Documents\Assignments\.Net\Event_Management\Event_Management\bin\roslyn\vbc.exe.config
+C:\Users\navrattan.singh\OneDrive - UKG\Documents\Assignments\.Net\Event_Management\Event_Management\bin\roslyn\vbc.rsp
+C:\Users\navrattan.singh\OneDrive - UKG\Documents\Assignments\.Net\Event_Management\Event_Management\bin\roslyn\VBCSCompiler.exe
+C:\Users\navrattan.singh\OneDrive - UKG\Documents\Assignments\.Net\Event_Management\Event_Management\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\navrattan.singh\OneDrive - UKG\Documents\Assignments\.Net\Event_Management\Event_Management\bin\Antlr3.Runtime.dll
+C:\Users\navrattan.singh\OneDrive - UKG\Documents\Assignments\.Net\Event_Management\Event_Management\bin\Dapper.dll
+C:\Users\navrattan.singh\OneDrive - UKG\Documents\Assignments\.Net\Event_Management\Event_Management\bin\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\navrattan.singh\OneDrive - UKG\Documents\Assignments\.Net\Event_Management\Event_Management\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\navrattan.singh\OneDrive - UKG\Documents\Assignments\.Net\Event_Management\Event_Management\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\navrattan.singh\OneDrive - UKG\Documents\Assignments\.Net\Event_Management\Event_Management\bin\Newtonsoft.Json.dll
+C:\Users\navrattan.singh\OneDrive - UKG\Documents\Assignments\.Net\Event_Management\Event_Management\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\navrattan.singh\OneDrive - UKG\Documents\Assignments\.Net\Event_Management\Event_Management\bin\System.Threading.Tasks.Extensions.dll
+C:\Users\navrattan.singh\OneDrive - UKG\Documents\Assignments\.Net\Event_Management\Event_Management\bin\System.Web.Helpers.dll
+C:\Users\navrattan.singh\OneDrive - UKG\Documents\Assignments\.Net\Event_Management\Event_Management\bin\System.Web.Mvc.dll
+C:\Users\navrattan.singh\OneDrive - UKG\Documents\Assignments\.Net\Event_Management\Event_Management\bin\System.Web.Optimization.dll
+C:\Users\navrattan.singh\OneDrive - UKG\Documents\Assignments\.Net\Event_Management\Event_Management\bin\System.Web.Razor.dll
+C:\Users\navrattan.singh\OneDrive - UKG\Documents\Assignments\.Net\Event_Management\Event_Management\bin\System.Web.WebPages.Deployment.dll
+C:\Users\navrattan.singh\OneDrive - UKG\Documents\Assignments\.Net\Event_Management\Event_Management\bin\System.Web.WebPages.dll
+C:\Users\navrattan.singh\OneDrive - UKG\Documents\Assignments\.Net\Event_Management\Event_Management\bin\System.Web.WebPages.Razor.dll
+C:\Users\navrattan.singh\OneDrive - UKG\Documents\Assignments\.Net\Event_Management\Event_Management\bin\Unity.Abstractions.dll
+C:\Users\navrattan.singh\OneDrive - UKG\Documents\Assignments\.Net\Event_Management\Event_Management\bin\Unity.Container.dll
+C:\Users\navrattan.singh\OneDrive - UKG\Documents\Assignments\.Net\Event_Management\Event_Management\bin\Unity.Mvc.dll
+C:\Users\navrattan.singh\OneDrive - UKG\Documents\Assignments\.Net\Event_Management\Event_Management\bin\WebActivatorEx.dll
+C:\Users\navrattan.singh\OneDrive - UKG\Documents\Assignments\.Net\Event_Management\Event_Management\bin\WebGrease.dll
+C:\Users\navrattan.singh\OneDrive - UKG\Documents\Assignments\.Net\Event_Management\Event_Management\bin\Dapper.xml
+C:\Users\navrattan.singh\OneDrive - UKG\Documents\Assignments\.Net\Event_Management\Event_Management\bin\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\navrattan.singh\OneDrive - UKG\Documents\Assignments\.Net\Event_Management\Event_Management\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\navrattan.singh\OneDrive - UKG\Documents\Assignments\.Net\Event_Management\Event_Management\bin\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\navrattan.singh\OneDrive - UKG\Documents\Assignments\.Net\Event_Management\Event_Management\bin\System.Threading.Tasks.Extensions.xml
+C:\Users\navrattan.singh\OneDrive - UKG\Documents\Assignments\.Net\Event_Management\Event_Management\bin\System.Web.Helpers.xml
+C:\Users\navrattan.singh\OneDrive - UKG\Documents\Assignments\.Net\Event_Management\Event_Management\bin\System.Web.Mvc.xml
+C:\Users\navrattan.singh\OneDrive - UKG\Documents\Assignments\.Net\Event_Management\Event_Management\bin\System.Web.Razor.xml
+C:\Users\navrattan.singh\OneDrive - UKG\Documents\Assignments\.Net\Event_Management\Event_Management\bin\System.Web.WebPages.xml
+C:\Users\navrattan.singh\OneDrive - UKG\Documents\Assignments\.Net\Event_Management\Event_Management\bin\System.Web.WebPages.Deployment.xml
+C:\Users\navrattan.singh\OneDrive - UKG\Documents\Assignments\.Net\Event_Management\Event_Management\bin\System.Web.WebPages.Razor.xml
+C:\Users\navrattan.singh\OneDrive - UKG\Documents\Assignments\.Net\Event_Management\Event_Management\bin\System.Web.Optimization.xml
+C:\Users\navrattan.singh\OneDrive - UKG\Documents\Assignments\.Net\Event_Management\Event_Management\bin\Newtonsoft.Json.xml
+C:\Users\navrattan.singh\OneDrive - UKG\Documents\Assignments\.Net\Event_Management\Event_Management\bin\Unity.Abstractions.pdb
+C:\Users\navrattan.singh\OneDrive - UKG\Documents\Assignments\.Net\Event_Management\Event_Management\bin\Unity.Container.pdb
+C:\Users\navrattan.singh\OneDrive - UKG\Documents\Assignments\.Net\Event_Management\Event_Management\bin\Unity.Mvc.pdb
+C:\Users\navrattan.singh\OneDrive - UKG\Documents\Assignments\.Net\Event_Management\Event_Management\bin\Unity.Mvc.xml
+C:\Users\navrattan.singh\OneDrive - UKG\Documents\Assignments\.Net\Event_Management\Event_Management\bin\Antlr3.Runtime.pdb
+C:\Users\navrattan.singh\OneDrive - UKG\Documents\Assignments\.Net\Event_Management\Event_Management\obj\Debug\Event_Management.csproj.AssemblyReference.cache
+C:\Users\navrattan.singh\OneDrive - UKG\Documents\Assignments\.Net\Event_Management\Event_Management\obj\Debug\Event_Management.csproj.CoreCompileInputs.cache
+C:\Users\navrattan.singh\OneDrive - UKG\Documents\Assignments\.Net\Event_Management\Event_Management\obj\Debug\Event_Ma.9E3870B0.Up2Date
+C:\Users\navrattan.singh\OneDrive - UKG\Documents\Assignments\.Net\Event_Management\Event_Management\obj\Debug\Event_Management.dll
+C:\Users\navrattan.singh\OneDrive - UKG\Documents\Assignments\.Net\Event_Management\Event_Management\obj\Debug\Event_Management.pdb

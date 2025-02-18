@@ -1,0 +1,355 @@
+﻿@{
+    ViewBag.Title = "EventList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<!--begin::Content wrapper-->
+<div class="d-flex flex-column flex-column-fluid">
+    <!--begin::Toolbar-->
+    <div id="kt_app_toolbar" class="app-toolbar pt-6 pb-2">
+        <!--begin::Toolbar container-->
+        <div id="kt_app_toolbar_container" class="app-container container-fluid d-flex align-items-stretch">
+            <!--begin::Toolbar wrapper-->
+            <div class="app-toolbar-wrapper d-flex flex-stack flex-wrap gap-4 w-100">
+                <!--begin::Page title-->
+                <div class="page-title d-flex flex-column justify-content-center gap-1 me-3">
+                    <!--begin::Title-->
+                    <h1 class="page-heading d-flex flex-column justify-content-center text-gray-900 fw-bold fs-3 m-0">Events List</h1>
+                    <!--end::Title-->
+                    <!--begin::Breadcrumb-->
+                    <ul class="breadcrumb breadcrumb-separatorless fw-semibold fs-7 my-0">
+                        <!--begin::Item-->
+                        <li class="breadcrumb-item text-muted">
+                            <a class="text-muted text-hover-primary">Home</a>
+                        </li>
+                        <!--end::Item-->
+                        <!--begin::Item-->
+                        <li class="breadcrumb-item">
+                            <span class="bullet bg-gray-500 w-5px h-2px"></span>
+                        </li>
+                        <!--end::Item-->
+                        <!--begin::Item-->
+                        <li class="breadcrumb-item text-muted">Events</li>
+                        <!--end::Item-->
+                    </ul>
+                    <!--end::Breadcrumb-->
+                </div>
+                <!--end::Page title-->
+            </div>
+            <!--end::Toolbar wrapper-->
+        </div>
+        <!--end::Toolbar container-->
+    </div>
+    <!--end::Toolbar-->
+    <!--begin::Content-->
+    <div id="kt_app_content" class="app-content flex-column-fluid">
+        <!--begin::Content container-->
+        <div id="kt_app_content_container" class="app-container container-fluid">
+            <!--begin::Card-->
+            <div class="card">
+                <!--begin::Card header-->
+                <div class="card-header border-0 pt-6">
+                    <!--begin::Card title-->
+                    <div class="card-title">
+                        <!--begin::Search-->
+                        <div class="d-flex align-items-center position-relative my-1">
+                            <i class="ki-outline ki-magnifier fs-3 position-absolute ms-5"></i>
+                            <input type="text" data-kt-user-table-filter="search" class="form-control form-control-solid w-250px ps-13" placeholder="Search Event" />
+                        </div>
+                        <!--end::Search-->
+                    </div>
+                    <!--begin::Card title-->
+                    <!--begin::Card toolbar-->
+                    <div class="card-toolbar">
+                        <!--begin::Modal - Edit Course-->
+                        <div class="modal fade" id="kt_modal_edit_user" tabindex="-1" aria-hidden="true">
+                            <!--begin::Modal dialog-->
+                            <div class="modal-dialog modal-dialog-centered mw-650px">
+                                <!--begin::Modal content-->
+                                <div class="modal-content">
+                                    <!--begin::Modal header-->
+                                    <div class="modal-header" id="kt_modal_edit_user_header">
+                                        <!--begin::Modal title-->
+                                        <h2 class="fw-bold">Edit Event</h2>
+                                        <!--end::Modal title-->
+                                        <!--begin::Close-->
+                                        <div class="btn btn-icon btn-sm btn-active-icon-primary" data-kt-users-modal-action="close">
+                                            <i class="ki-duotone ki-cross fs-1">
+                                                <span class="path1"></span>
+                                                <span class="path2"></span>
+                                            </i>
+                                        </div>
+                                        <!--end::Close-->
+                                    </div>
+                                    <!--end::Modal header-->
+                                    <!--begin::Modal body-->
+                                    <div class="modal-body px-5 my-7">
+                                        <!--begin::Form-->
+                                        <form id="kt_modal_edit_user_form" class="form" action="#">
+                                            <!--begin::Scroll-->
+                                            <div class="d-flex flex-column scroll-y px-5 px-lg-10" id="kt_modal_edit_event_scroll" data-kt-scroll="true" data-kt-scroll-activate="true" data-kt-scroll-max-height="auto" data-kt-scroll-dependencies="#kt_modal_edit_event_header" data-kt-scroll-wrappers="#kt_modal_edit_event_scroll" data-kt-scroll-offset="300px">
+
+                                                <!-- Hidden Event ID -->
+                                                <input type="hidden" id="edit_event_id" name="edit_event_id">
+
+                                                <!--begin::Input group-->
+                                                <div class="fv-row mb-7">
+                                                    <label class="required fw-semibold fs-6 mb-2">Title</label>
+                                                    <input type="text" id="edit_title" name="title" class="form-control form-control-solid disabled" placeholder="Title">
+                                                </div>
+                                                <!--end::Input group-->
+
+                                                <div class="fv-row mb-7">
+                                                    <label class="required fw-semibold fs-6 mb-2">Description</label>
+                                                    <textarea type="text" id="edit_description" name="description" class="form-control form-control-solid disabled" placeholder="Description" rows="4">
+    
+                                                    </textarea>
+                                                </div>
+
+                                                <div class="fv-row mb-7">
+                                                    <label class="required fw-semibold fs-6 mb-2">Location</label>
+                                                    <input type="text" id="edit_location" name="location" class="form-control form-control-solid disabled" placeholder="Location">
+                                                </div>
+
+                                                <div class="fv-row mb-7">
+                                                    <label class="required fw-semibold fs-6 mb-2">Available Seats</label>
+                                                    <input type="text" id="edit_available_seats" name="edit_available_seats" class="form-control form-control-solid disabled" placeholder="Total Seats">
+                                                </div>
+                                                <!--begin::Input group-->
+                                                <div class="row g-9 mb-7">
+                                                    <div class="col-md-6 fv-row">
+                                                        <label class="required fw-semibold fs-6 mb-2">Event Date</label>
+                                                        <input class="form-control form-control-transparent fw-bold pe-5 flatpickr-input disabled" placeholder="Select date" id="edit_event_date" name="event_date" type="text" readonly="readonly">
+                                                    </div>
+
+                                                    <div class="col-md-6 fv-row">
+                                                        <label class="required fw-semibold fs-6 mb-2">Event Time</label>
+                                                        <input class="form-control form-control-transparent fw-bold pe-5 flatpickr-input disabled" placeholder="Select time" id="edit_event_time" name="event_time" type="text" readonly="readonly">
+                                                    </div>
+                                                </div>
+                                                <!--end::Input group-->
+                                            
+
+                                            </div>
+                                            <!--end::Scroll-->
+                                            <!--begin::Actions-->
+                                            <div class="text-center pt-10">
+                                                <button type="reset" class="btn btn-light me-3" data-kt-users-modal-action="cancel">Discard</button>
+                                                <button id="enroll_button" type="submit" class="btn btn-primary" data-kt-users-modal-action="submit">
+                                                    <span class="indicator-label">Accept Invitation</span>
+                                                    <span class="indicator-progress">
+                                                        Please wait...
+                                                        <span class="spinner-border spinner-border-sm align-middle ms-2"></span>
+                                                    </span>
+                                                </button>
+                                                <button id="cancel_enroll_button" type="button" class="btn btn-danger" style="display: none;">
+                                                    Cancel Invitation
+                                                </button>
+                                            </div>
+                                            <!--end::Actions-->
+                                        </form>
+                                        <!--end::Form-->
+                                    </div>
+
+                                    <!--end::Modal body-->
+                                </div>
+                                <!--end::Modal content-->
+                            </div>
+                            <!--end::Modal dialog-->
+                        </div>
+                        <!--end::Modal - Edit Course-->
+                    </div>
+                    <!--end::Card toolbar-->
+                </div>
+                <!--end::Card header-->
+                <!--begin::Card body-->
+                <div class="card-body py-4">
+                    <!--begin::Table-->
+                    <table class="table align-middle table-row-dashed fs-6 gy-5" id="kt_table_users">
+                        <thead>
+                            <tr class="text-start text-muted fw-bold fs-7 text-uppercase gs-0">
+                               
+                                <th class="w-10px pe-2">
+
+                                </th>
+                                <th class="min-w-125px">Event ID</th>
+                                <th class="min-w-125px">Title</th>
+                                <th class="min-w-125px">Description</th>
+                                <th class="min-w-125px">Location</th>
+                                <th class="min-w-125px">Event Date</th>
+                                <th class="min-w-125px">Enrollment</th>
+                                <th class="min-w-100px">Actions</th>
+                                <th class="min-w-1px">
+                                </th>
+                                <th class="min-w-1px">
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-gray-600 fw-semibold">
+                            @if (Model != null)
+                            {
+                                if (Model?.EventList?.Count > 0)
+                                {
+                                    foreach (var item in Model.EventList)
+                                    {
+                                        <tr>
+
+                                            <td>
+                                            </td>
+                                            <td class="d-flex align-items-center">
+
+                                                <!--begin::User details-->
+                                                <div class="d-flex flex-column">
+                                                    <a class="text-gray-800 text-hover-primary mb-1">@item.EventID</a>
+                                                </div>
+                                                <!--begin::User details-->
+                                            </td>
+                                            <td>@item.Title</td>
+                                            <td>@item.EventDescription</td>
+                                            <td>@item.Location</td>
+                                            <td>@item.EventDate</td>
+                                            <td>
+                                                @if (item.EventEnrolled == 1)
+                                                {
+                                                    <div class="badge badge-light-success">Yes</div>
+                                                }
+                                                else
+                                                {
+                                                    <div class="badge badge-light-danger">No</div>
+                                                }
+                                            </td>
+                                            <td>
+                                                <a onclick="editEvent(@item.EventID);" class="btn btn-light btn-active-light-primary btn-flex btn-center btn-sm" data-kt-menu-placement="bottom-end">
+                                                    View
+                                                </a>
+
+                                            </td>
+                                            <td>
+                                            </td>
+                                            <td>
+                                            </td>
+                                        </tr>
+                                    }
+                                }
+                            }
+                        </tbody>
+                    </table>
+                    <!--end::Table-->
+                </div>
+                <!--end::Card body-->
+            </div>
+            <!--end::Card-->
+        </div>
+        <!--end::Content container-->
+    </div>
+    <!--end::Content-->
+</div>
+<!--end::Content wrapper-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#edit_location').addClass('disabled').prop('disabled', true);
+
+        var $editModal = $('#kt_modal_edit_user'); // Edit modal
+        var $editForm = $editModal.find('#kt_modal_edit_user_form'); // Edit form
+        var editModalInstance = new bootstrap.Modal($editModal[0]); // Bootstrap modal instance
+
+        // Function to open edit modal and fetch event details
+        window.editEvent = function (eventId) {
+            // Show loading state (Optional)
+            $('#edit_title, #edit_description, #edit_location, #edit_total_seats, #edit_event_date, #edit_event_time').val('Loading...');
+
+            // AJAX call to get event details
+            $.ajax({
+                url: '/user/GetEventDetails', 
+                type: 'GET',
+                data: { EventID: eventId }, // Send event ID as parameter
+                success: function (response) {
+                    if (response.success) {
+                        // Fill modal fields with retrieved data
+                        $('#edit_event_id').val(response.data.eventId);
+                        $('#edit_title').val(response.data.title);
+                        $('#edit_description').val(response.data.description);
+                        $('#edit_location').val(response.data.location);
+                        $('#edit_available_seats').val(response.data.availableSeats);
+                        $('#edit_event_date').val(response.data.eventDate);
+                        $('#edit_event_time').val(response.data.eventTime);
+                        // Disable "Enroll" button if no available seats
+                        let enrollButton = $('#enroll_button');
+                        let cancelEnrollButton = $('#cancel_enroll_button');
+                        if (response.data.availableSeats <= 0) {
+                            enrollButton.prop('disabled', true)
+                                .addClass('btn-secondary')
+                                .removeClass('btn-primary')
+                                .css('pointer-events', 'none'); // Prevent clicks
+                        } else if (response.data.availableSeats >= 1 && response.data.eventEnrolled === 0)
+                        {
+                            enrollButton.prop('disabled', false)
+                                .addClass('btn-primary')
+                                .removeClass('btn-secondary')
+                                .css('pointer-events', 'auto'); // Enable clicks
+                        }
+                        // Show/Hide Cancel Enrollment button
+                        if (response.data.eventEnrolled === 1) {
+                            cancelEnrollButton.show();  // Show cancel button
+                            enrollButton.hide();        // Hide enroll button
+                        } else {
+                            cancelEnrollButton.hide();  // Hide cancel button
+                            enrollButton.show();        // Show enroll button
+                        }
+
+                        // Show the modal
+                        editModalInstance.show();
+                    } else {
+                        alert('Error: Unable to fetch event details.');
+                    }
+                },
+                error: function () {
+                    alert('Error: Something went wrong.');
+                }
+            });
+        };
+        // Submit button click handler for edit modal
+        $editModal.find('[data-kt-users-modal-action="submit"]').click(function (event) {
+            Loader(true);
+            event.preventDefault();
+
+            var eventId = $("#edit_event_id").val();
+            insert_user_event_enrollment(eventId);
+        });
+
+        // Cancel Enrollment Button Click
+        $('#cancel_enroll_button').click(function () {
+            var eventId = $("#edit_event_id").val(); // Get Event ID
+
+            Cancel_User_Enrollment(eventId);
+        });
+        // Cancel button click handler
+        $editModal.find('[data-kt-users-modal-action="cancel"], [data-kt-users-modal-action="close"]').click(function (event) {
+            event.preventDefault();
+            Swal.fire({
+                text: "Are you sure you would like to cancel?",
+                icon: "warning",
+                showCancelButton: true,
+                buttonsStyling: false,
+                confirmButtonText: "Yes, cancel it!",
+                cancelButtonText: "No, return",
+                customClass: {
+                    confirmButton: "btn btn-primary",
+                    cancelButton: "btn btn-active-light"
+                }
+            }).then(function (result) {
+                if (result.value) {
+                    $editForm[0].reset();
+                    editModalInstance.hide();
+                } else if (result.dismiss === "cancel") {
+                    showCancelError();
+                }
+            });
+        });
+
+
+    });
+
+</script>

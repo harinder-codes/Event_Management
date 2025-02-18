@@ -1,0 +1,355 @@
+﻿@model Event_Management.Models.AdminUserResponse
+@{
+    ViewBag.Title = "UserList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<!--begin::Content wrapper-->
+<div class="d-flex flex-column flex-column-fluid">
+    <!--begin::Toolbar-->
+    <div id="kt_app_toolbar" class="app-toolbar pt-6 pb-2">
+        <!--begin::Toolbar container-->
+        <div id="kt_app_toolbar_container" class="app-container container-fluid d-flex align-items-stretch">
+            <!--begin::Toolbar wrapper-->
+            <div class="app-toolbar-wrapper d-flex flex-stack flex-wrap gap-4 w-100">
+                <!--begin::Page title-->
+                <div class="page-title d-flex flex-column justify-content-center gap-1 me-3">
+                    <!--begin::Title-->
+                    <h1 class="page-heading d-flex flex-column justify-content-center text-gray-900 fw-bold fs-3 m-0">User List</h1>
+                    <!--end::Title-->
+                    <!--begin::Breadcrumb-->
+                    <ul class="breadcrumb breadcrumb-separatorless fw-semibold fs-7 my-0">
+                        <!--begin::Item-->
+                        <li class="breadcrumb-item text-muted">
+                            <a  class="text-muted text-hover-primary">Home</a>
+                        </li>
+                        <!--end::Item-->
+                        <!--begin::Item-->
+                        <li class="breadcrumb-item">
+                            <span class="bullet bg-gray-500 w-5px h-2px"></span>
+                        </li>
+                        <!--end::Item-->
+                        <!--begin::Item-->
+                        <li class="breadcrumb-item text-muted">User</li>
+                        <!--end::Item-->
+                    </ul>
+                    <!--end::Breadcrumb-->
+                </div>
+                <!--end::Page title-->
+            </div>
+            <!--end::Toolbar wrapper-->
+        </div>
+        <!--end::Toolbar container-->
+    </div>
+    <!--end::Toolbar-->
+    <!--begin::Content-->
+    <div id="kt_app_content" class="app-content flex-column-fluid">
+        <!--begin::Content container-->
+        <div id="kt_app_content_container" class="app-container container-fluid">
+            <!--begin::Card-->
+            <div class="card">
+                <!--begin::Card header-->
+                <div class="card-header border-0 pt-6">
+                    <!--begin::Card title-->
+                    <div class="card-title">
+                        <!--begin::Search-->
+                        <div class="d-flex align-items-center position-relative my-1">
+                            <i class="ki-outline ki-magnifier fs-3 position-absolute ms-5"></i>
+                            <input type="text" data-kt-user-table-filter="search" class="form-control form-control-solid w-250px ps-13" placeholder="Search User" />
+                        </div>
+                        <!--end::Search-->
+                    </div>
+                    <!--begin::Card title-->
+                    <!--begin::Card toolbar-->
+                    <div class="card-toolbar">
+            
+                        <!--begin::Modal - Edit Course-->
+                        <div class="modal fade" id="kt_modal_edit_user" tabindex="-1" aria-hidden="true">
+                            <!--begin::Modal dialog-->
+                            <div class="modal-dialog modal-dialog-centered mw-650px">
+                                <!--begin::Modal content-->
+                                <div class="modal-content">
+                                    <!--begin::Modal header-->
+                                    <div class="modal-header" id="kt_modal_edit_user_header">
+                                        <!--begin::Modal title-->
+                                        <h2 class="fw-bold">Edit User Role</h2>
+                                        <!--end::Modal title-->
+                                        <!--begin::Close-->
+                                        <div class="btn btn-icon btn-sm btn-active-icon-primary" data-kt-users-modal-action="close">
+                                            <i class="ki-duotone ki-cross fs-1">
+                                                <span class="path1"></span>
+                                                <span class="path2"></span>
+                                            </i>
+                                        </div>
+                                        <!--end::Close-->
+                                    </div>
+                                    <!--end::Modal header-->
+                                    <!--begin::Modal body-->
+                                    <div class="modal-body px-5 my-7">
+                                        <!--begin::Form-->
+                                        <form id="kt_modal_edit_user_form" class="form" action="#">
+                                            <!--begin::Scroll-->
+                                            <div class="d-flex flex-column scroll-y px-5 px-lg-10" id="kt_modal_edit_event_scroll" data-kt-scroll="true" data-kt-scroll-activate="true" data-kt-scroll-max-height="auto" data-kt-scroll-dependencies="#kt_modal_edit_event_header" data-kt-scroll-wrappers="#kt_modal_edit_event_scroll" data-kt-scroll-offset="300px">
+
+                                                <!-- Hidden Event ID -->
+                                                <input type="hidden" id="edit_user_id" name="edit_user_id">
+
+                                                <!--begin::Input group-->
+                                                <div class="fv-row mb-7">
+                                                    <label class="required fw-semibold fs-6 mb-2">First Name</label>
+                                                    <input type="text" id="edit_first_name" name="edit_first_name" class="form-control form-control-solid disabled" placeholder="First Name">
+                                                </div>
+                                                <!--end::Input group-->
+
+                                                <div class="fv-row mb-7">
+                                                    <label class="required fw-semibold fs-6 mb-2">Last Name</label>
+                                                    <input type="text" id="edit_last_name" name="edit_last_name" class="form-control form-control-solid disabled" placeholder="Last Name">
+                                                </div>
+
+                                                <div class="fv-row mb-7">
+                                                    <label class="required fw-semibold fs-6 mb-2">Email</label>
+                                                    <input type="text" id="edit_email" name="edit_email" class="form-control form-control-solid disabled" placeholder="Email">
+                                                </div>
+
+                                                <div class="fv-row mb-7">
+                                                    <label class="required fw-semibold fs-6 mb-2">Total Seats</label>
+                                                    <!--begin::Input-->
+                                                    <select id="edit_user_role" name="edit_user_role" data-control="select2" data-placeholder="Select a User Role" data-hide-search="true" class="form-select form-select-solid fw-bold">
+                                                
+                                                        <option value="2">User</option>
+                                                        <option value="1">Admin</option>
+                                                    </select>
+                                                    <!--end::Input-->
+                                                </div>
+
+                                            </div>
+                                            <!--end::Scroll-->
+                                            <!--begin::Actions-->
+                                            <div class="text-center pt-10">
+                                                <button type="reset" class="btn btn-light me-3" data-kt-users-modal-action="cancel">Discard</button>
+                                                <button type="submit" class="btn btn-primary" data-kt-users-modal-action="submit">
+                                                    <span class="indicator-label">Update</span>
+                                                    <span class="indicator-progress">
+                                                        Please wait...
+                                                        <span class="spinner-border spinner-border-sm align-middle ms-2"></span>
+                                                    </span>
+                                                </button>
+                                            </div>
+                                            <!--end::Actions-->
+                                        </form>
+                                        <!--end::Form-->
+                                    </div>
+
+                                    <!--end::Modal body-->
+                                </div>
+                                <!--end::Modal content-->
+                            </div>
+                            <!--end::Modal dialog-->
+                        </div>
+                        <!--end::Modal - Edit Course-->
+                    </div>
+                    <!--end::Card toolbar-->
+                </div>
+                <!--end::Card header-->
+                <!--begin::Card body-->
+                <div class="card-body py-4">
+                    <!--begin::Table-->
+                    <table class="table align-middle table-row-dashed fs-6 gy-5" id="kt_table_users">
+                        <thead>
+                            <tr class="text-start text-muted fw-bold fs-7 text-uppercase gs-0">
+                               
+                                <th class="min-w-125px">User ID</th>
+                                <th class="min-w-125px">First Name</th>
+                                <th class="min-w-125px">Last Name</th>
+                                <th class="min-w-125px">Email</th>
+                                <th class="min-w-125px">User Role</th>
+                                <th class="min-w-100px">Actions</th>
+                                <th class="min-w-1px">
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-gray-600 fw-semibold">
+                            @if (Model != null)
+                            {
+                                if (Model?.UserList?.Count > 0)
+                                {
+                                    foreach (var item in Model.UserList)
+                                    {
+                                        <tr>
+                                            <td class="d-flex align-items-center">
+
+                                                <!--begin::User details-->
+                                                <div class="d-flex flex-column">
+                                                    <a class="text-gray-800 text-hover-primary mb-1">@item.UserID</a>
+                                                </div>
+                                                <!--begin::User details-->
+                                            </td>
+                                            <td>@item.FirstName</td>
+                                            <td>@item.LastName</td>
+                                            <td>@item.Email</td>
+                                            <td>
+                                                @if (item.UserRole == 1)
+                                                {
+                                                    <div class="badge badge-light-success">Admin</div>
+                                                }
+                                                else
+                                                {
+                                                    <div class="badge badge-light-success">User</div>
+                                                }
+                                                </td>
+                                            
+                                            <td>
+                                                <a href="#" class="btn btn-light btn-active-light-primary btn-flex btn-center btn-sm" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
+                                                    Actions
+                                                    <i class="ki-duotone ki-down fs-5 ms-1"></i>
+                                                </a>
+                                                <!--begin::Menu-->
+                                                <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4" data-kt-menu="true">
+                                                    <!--begin::Menu item-->
+                                                    <div class="menu-item px-3">
+                                                        <a class="menu-link px-3" onclick="editUser('@item.UserID', '@item.FirstName', '@item.LastName', '@item.Email'
+                                                        , '@item.UserRole');">Change Role</a>
+                                                    </div>
+                                                    <!--end::Menu item-->
+                                                </div>
+                                                <!--end::Menu-->
+                                            </td>
+                                            <td>
+                                            </td>
+                                        </tr>
+                                    }
+                                }
+                            }
+                        </tbody>
+                    </table>
+                    <!--end::Table-->
+                </div>
+                <!--end::Card body-->
+            </div>
+            <!--end::Card-->
+        </div>
+        <!--end::Content container-->
+    </div>
+    <!--end::Content-->
+</div>
+<!--end::Content wrapper-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $('#edit_location').addClass('disabled').prop('disabled', true);
+        var $editModal = $('#kt_modal_edit_user'); // Edit modal
+        var $editForm = $editModal.find('#kt_modal_edit_user_form'); // Edit form
+        var editModalInstance = new bootstrap.Modal($editModal[0]); // Bootstrap modal instance
+
+        // Open the edit modal with event details
+        window.editUser = function (UserID, FirstName, LastName, Email, UserRole) {
+            $('#edit_first_name').val(FirstName);
+            $('#edit_last_name').val(LastName);
+            $('#edit_email').val(Email);
+            $('#edit_user_role').val(UserRole);
+            // Store Event ID in a hidden input field
+            $('#edit_user_id').val(UserID);
+
+            // Show the modal
+            editModalInstance.show();
+        };
+
+        // Submit button click handler for edit modal
+        $editModal.find('[data-kt-users-modal-action="submit"]').click(function (event) {
+            Loader(true);
+            event.preventDefault();
+
+            var userID = $("#edit_user_id").val();
+            var userRole = $("#edit_user_role").val();
+            debugger;
+            $.ajax({
+                type: "POST",
+                url: "/Admin/EditUserRole",
+                data: {
+                    "UserID": userID,
+                    "UserRole": userRole
+                     },
+
+                success: function (result) {
+                    Loader(false);
+                    if (result.data == 1) {
+                        Swal.fire({
+                            text: "User Role updated successfully!",
+                            icon: "success",
+                            buttonsStyling: false,
+                            confirmButtonText: "Ok, got it!",
+                            customClass: {
+                                confirmButton: "btn btn-primary"
+                            }
+                        }).then((result) => {
+                            if (result.isConfirmed) {
+                                window.location.href = '/Admin/UserList'; 
+                            }
+                        });
+                    } else {
+                        Swal.fire({
+                            text: "Error occurred! Please try again later.",
+                            icon: "error",
+                            buttonsStyling: false,
+                            confirmButtonText: "Ok, got it!",
+                            customClass: {
+                                confirmButton: "btn btn-primary"
+                            }
+                        }).then((result) => {
+                            if (result.isConfirmed) {
+                                window.location.href = '/Admin/UserList'; 
+                            }
+                        });
+                    }
+                },
+                error: function () {
+                    Loader(false);
+                    Swal.fire({
+                        text: "Error occurred! Please try again later.",
+                        icon: "error",
+                        buttonsStyling: false,
+                        confirmButtonText: "Ok, got it!",
+                        customClass: {
+                            confirmButton: "btn btn-primary"
+                        }
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            window.location.href = '/Admin/UserList'; 
+                        }
+                    });
+                }
+            });
+        });
+
+        // Cancel button click handler
+        $editModal.find('[data-kt-users-modal-action="cancel"], [data-kt-users-modal-action="close"]').click(function (event) {
+            event.preventDefault();
+            Swal.fire({
+                text: "Are you sure you would like to cancel?",
+                icon: "warning",
+                showCancelButton: true,
+                buttonsStyling: false,
+                confirmButtonText: "Yes, cancel it!",
+                cancelButtonText: "No, return",
+                customClass: {
+                    confirmButton: "btn btn-primary",
+                    cancelButton: "btn btn-active-light"
+                }
+            }).then(function (result) {
+                if (result.value) {
+                    $editForm[0].reset();
+                    editModalInstance.hide();
+                } else if (result.dismiss === "cancel") {
+                    showCancelError();
+                }
+            });
+        });
+
+
+    });
+
+</script>
+
+
